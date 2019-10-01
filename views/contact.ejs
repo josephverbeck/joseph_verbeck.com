@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+    //auto expand textarea
+    function adjust_textarea(h) {
+        h.style.height = "20px";
+        h.style.height = (h.scrollHeight)+"px";
+    }
+</script>
+<html lang="en">
+    <link rel="stylesheet" href="application.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <header>
+        <% include ./partials/header %>
+    </header>
+
+    <body>
+        <div class="hero-image contact">
+                <div class="hero-text">
+                    <h1>Contact Me</h1>
+                    <h4>Have questions? I have answers(maybe).<h4>
+                </div>
+            </div>
+            <div class="form-style-8">
+                <P>Want to get in touch with me? Fill out the form below to send me a message and I will try to get back to you within 24 hours!</p>
+                <form>
+                    <input type="text" name="field1" placeholder="Full Name" />
+                    <input type="email" name="field2" placeholder="Email" />
+                    <textarea placeholder="Message" onkeyup="adjust_textarea(this)"></textarea>
+                    <input type="button" value="Send Message" />
+                </form>
+            </div>
+    </body>
+
+    <footer>
+        <% include ./partials/footer %>
+    </footer>
+</html>
